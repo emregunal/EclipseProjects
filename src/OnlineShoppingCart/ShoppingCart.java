@@ -5,6 +5,7 @@ import java.util.HashMap;
 public class ShoppingCart {
 
 	private HashMap<String, Double> shopCart;
+	private Double total=0.0;
 
 	public ShoppingCart() {
 		this.shopCart = new HashMap<>();
@@ -12,16 +13,25 @@ public class ShoppingCart {
 
 	public void viewCart() {
 		System.out.println(shopCart);
+		if(shopCart!=null) {
+			for(Double p: shopCart.values()) {
+				total+=p;
+			}
+			System.out.println("Total Price: "+total);
+		}
+		
 	}
 
 	public void addProduct(String productName, Double price) {
 
 		shopCart.put(productName, price);
+		
 
 	}
 
 	public void removeProduct(String productName) {
 		shopCart.remove(productName);
+		total=0.0;
 	}
 
 }
