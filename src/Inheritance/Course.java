@@ -11,7 +11,8 @@ public class Course {
 		this.price = price;
 
 	}
-
+	
+	
 	public void showInfo() {
 		System.out.println("Course Name: " + courseName);
 		System.out.println("Instructor: " + instructor);
