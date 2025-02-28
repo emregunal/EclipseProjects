@@ -7,8 +7,7 @@ public class MainClass {
 				new Light(), 
 				new AirConditioner(), 
 				new SmartTV()
-																							// is now ON. Default
-																							// Channel: 1"
+																							
 		};
 
 		for (SmartAppliance appliance : appliances) {
